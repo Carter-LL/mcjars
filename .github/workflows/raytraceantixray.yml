@@ -33,10 +33,10 @@ jobs:
           git clone https://github.com/stonar96/RayTraceAntiXray.git ~/RayTraceAntiXray
 
       - name: Build RayTraceAntiXray
+        continue-on-error: true
         run: |
           cd ~/RayTraceAntiXray
           ./compile.sh
-          continue-on-error: true
 
       # Get the date of the build
       - name: Get date
